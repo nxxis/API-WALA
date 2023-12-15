@@ -12,8 +12,8 @@ const PORT = process.env.PORT || 3000;
 
 //middleware
 app.use(cors());
-app.use("/api/users", userRoute);
 app.use(express.json());
+app.use("/api/users", userRoute);
 app.use(errorMiddleware);
 
 // routes

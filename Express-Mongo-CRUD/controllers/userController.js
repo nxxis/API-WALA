@@ -16,8 +16,8 @@ const getUsers = asyncHandler(async (req, res) => {
 const getUser = asyncHandler(async (req, res) => {
   try {
     const { id } = req.params;
-    const product = await User.findById(id);
-    res.status(200).json(product);
+    const user = await User.findById(id);
+    res.status(200).json(user);
   } catch (error) {
     res.status(500);
     throw new Error(error.message);
