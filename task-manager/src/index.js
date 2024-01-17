@@ -7,17 +7,6 @@ const taskRouter = require('./routers/task');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// app.use((req, res, next) => {
-//   console.log(req.method, req.path);
-//   next();
-// });
-
-// app.use((req, res, next) => {
-//   res
-//     .status(503)
-//     .send('Server is under maintainance, please try again after some time');
-// });
-
 app.use(express.json()); /// parses incoming JSON to an Object
 app.use(userRouter);
 app.use(taskRouter);
