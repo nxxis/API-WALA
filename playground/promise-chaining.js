@@ -1,5 +1,5 @@
-require('../src/db/mongoose');
-const Task = require('../src/models/task');
+require('../task-manager/src/db/mongoose');
+const Task = require('../task-manager/src/models/task');
 
 const deleteTaskAndCount = async (id) => {
   const deleteTask = await Task.findByIdAndDelete(id);
